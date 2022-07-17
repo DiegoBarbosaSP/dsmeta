@@ -4,16 +4,26 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+<<<<<<< HEAD
 import { BASE_URL } from '../../utils/request';
+=======
+>>>>>>> 1e7810059601607f1842d6f5a75b00926bf0ae6a
 function SalesCard() {
     const[minDate, setMinDate] = useState(new Date());
     const[maxDate, setMaxDate] = useState(new Date());
 
     useEffect(()=> {
+<<<<<<< HEAD
         axios.get(`${BASE_URL}/sales`)
         .then(response => {
             console.log(response.data)
         });
+=======
+        axios.get("http://localhost:8080/sales")
+        .then(response => {
+            console.log(response.data)
+        })
+>>>>>>> 1e7810059601607f1842d6f5a75b00926bf0ae6a
     },[]);
     return (
         <div className="dsmeta-card">
